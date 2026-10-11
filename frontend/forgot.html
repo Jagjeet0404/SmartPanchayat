@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GramConnect - Forgot Password</title><link rel="stylesheet" href="styles.css"></head>
+<body class="auth-body"><div class="auth-box">
+<h2>Reset Password</h2><p>Enter your registered email</p>
+<form id="forgotForm" novalidate>
+  <input type="email" id="fEmail" placeholder="Enter email">
+  <button type="submit">Send Reset Link</button>
+  <p><a href="login.html">Back to login</a></p>
+  <div id="fMsg" class="msg"></div>
+</form></div>
+<script>
+document.getElementById("forgotForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  var m = document.getElementById("fMsg");
+  if (!/^[^ @]+@[^ @]+\.[a-zA-Z]{2,}$/.test(document.getElementById("fEmail").value.trim())) {
+    m.textContent = "Invalid email"; m.className = "msg bad"; return;
+  }
+  // Email sending is not configured yet; the backend has no mail service.
+  m.textContent = "If this email is registered, the Panchayat office will contact you to reset the password.";
+  m.className = "msg ok";
+});
+</script></body></html>

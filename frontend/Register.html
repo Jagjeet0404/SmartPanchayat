@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GramConnect - Register</title><link rel="stylesheet" href="styles.css"></head>
+<body class="auth-body"><div class="auth-box">
+<h2>GramConnect</h2><p>Create your account</p>
+<form id="registerForm" novalidate>
+  <input type="text" id="name" placeholder="Full Name"><small class="error" id="nameError"></small>
+  <input type="email" id="email" placeholder="Email"><small class="error" id="emailError"></small>
+  <input type="text" id="phone" placeholder="Phone Number (10 digits)"><small class="error" id="phoneError"></small>
+  <input type="password" id="password" placeholder="Password"><small class="error" id="passError"></small>
+  <input type="password" id="confirmPassword" placeholder="Confirm Password"><small class="error" id="confirmError"></small>
+  <button type="submit" id="regBtn">Register</button>
+  <p class="switch">Already have an account? <a href="login.html">Login</a></p>
+</form>
+<div id="successBox" class="msg"></div></div>
+<script src="config.js"></script><script src="api.js"></script><script src="register.js"></script></body></html>

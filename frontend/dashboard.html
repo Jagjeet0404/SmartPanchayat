@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GramConnect - Dashboard</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<div class="sidebar"><h2>Village Panel</h2>
+  <a href="#dashboard" data-view="dashboard">🏠 Dashboard</a>
+  <a href="#complaints" data-view="complaints">📩 Complaints</a>
+  <a href="#notices" data-view="notices">📢 Notices</a>
+  <a href="#schemes" data-view="schemes">📊 Schemes</a>
+  <a href="#jobs" data-view="jobs">💼 Jobs</a>
+  <a href="#ai" data-view="ai">🤖 AI Help</a></div>
+<div class="main">
+  <div class="topbar"><h3>Welcome, <span id="user"></span></h3><button class="logout" id="logoutBtn">Logout</button></div>
+  <div class="navm">
+    <a href="#dashboard" data-view="dashboard">Dashboard</a><a href="#complaints" data-view="complaints">Complaints</a>
+    <a href="#notices" data-view="notices">Notices</a><a href="#schemes" data-view="schemes">Schemes</a><a href="#jobs" data-view="jobs">Jobs</a><a href="#ai" data-view="ai">AI Help</a>
+  </div>
+
+  <section id="view-dashboard" class="view">
+    <div class="cards">
+      <div class="card"><h3>Total Complaints</h3><p id="total">0</p></div>
+      <div class="card"><h3>Pending</h3><p id="pending">0</p></div>
+      <div class="card"><h3>Resolved</h3><p id="resolved">0</p></div>
+    </div>
+  </section>
+
+  <section id="view-complaints" class="view">
+    <div class="panel"><h3>New Complaint</h3>
+      <form id="cForm"><input id="cTitle" placeholder="Title" required>
+        <textarea id="cDesc" rows="3" placeholder="Describe the problem"></textarea>
+        <button type="submit">Submit</button> <span id="cMsg" class="msg"></span></form></div>
+    <div class="panel"><h3>My Complaints</h3><div id="list">Loading...</div></div>
+  </section>
+
+  <section id="view-ai" class="view">
+    <div class="panel"><h3>🤖 AI Help – schemes &amp; jobs</h3>
+      <p>Apni baat likho, jaise: "Main kisan hoon, mere liye kaunsi scheme hai?"</p>
+      <form id="aiForm"><textarea id="aiQ" rows="3" placeholder="Apna sawal likho..." required></textarea>
+        <button type="submit" id="aiBtn">Ask AI</button></form>
+      <div id="aiA" class="aians"></div></div>
+  </section>
+
+  <section id="view-info" class="view">
+    <div class="panel"><h3 id="infoTitle"></h3><div id="infoList">Loading...</div></div>
+    <div class="panel"><h3 id="infoAddTitle"></h3>
+      <form id="infoForm"><input id="iTitle" placeholder="Title" required>
+        <textarea id="iDesc" rows="3" placeholder="Description"></textarea>
+        <input id="iDetails" placeholder="Extra details (date / contact / apply at)">
+        <button type="submit">Add</button> <span id="iMsg" class="msg"></span></form></div>
+  </section>
+</div>
+<script src="config.js"></script><script src="api.js"></script><script src="dashboard.js"></script></body></html>

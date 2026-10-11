@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GramConnect - Login</title><link rel="stylesheet" href="styles.css"></head>
+<body class="auth-body"><div class="auth-box">
+<h2>Login</h2><p>GramConnect Portal</p>
+<form id="loginForm" novalidate>
+  <input type="email" id="loginEmail" placeholder="Email" autocomplete="username">
+  <small id="loginEmailError" class="error"></small>
+  <input type="password" id="loginPassword" placeholder="Password" autocomplete="current-password">
+  <small id="loginPassError" class="error"></small>
+  <div class="extra"><span></span><a href="forgot.html">Forgot Password?</a></div>
+  <button type="submit" id="loginBtn">Login</button>
+  <p>New user? <a href="Register.html">Register here</a></p>
+  <div id="msg" class="msg"></div>
+</form></div>
+<script src="config.js"></script><script src="api.js"></script><script src="login.js"></script></body></html>

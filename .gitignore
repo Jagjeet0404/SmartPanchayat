@@ -1,0 +1,8 @@
+target/
+data/
+*.class
+node_modules/
+.vscode/
+.vercel/
+.idea/
+apikey.txt
